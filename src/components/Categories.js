@@ -27,10 +27,13 @@ const Categories = () => {
             tagline: ''
         },
     ]
-
+    
     useEffect(() => {
-
+        
+        const calc = Math.floor(mainInnerRef.current.getBoundingClientRect().width / 195)
+        setLimiter(calc)
         const handleWindowResize = () => {
+            
             const calculation = Math.floor(mainInnerRef.current.getBoundingClientRect().width / 195)
             setLimiter(calculation)
         }
